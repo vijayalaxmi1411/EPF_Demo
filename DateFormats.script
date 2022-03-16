@@ -1,0 +1,15 @@
+﻿(*set the timeInputFormat to iso8601
+put the date into myDate
+put the time into currentTime
+insert currentTime after myDate
+log myDate
+set the listFormat to empty
+log myDate
+put formattedTime("%Y-%m-%dT%H-%M-%S",myDate) into formattedDate
+log formattedDate*)
+
+put the long international time 
+//send the current date in the following format:2022-03-11T16:47:19.41Z.
+set the timeInputFormat to iso8601
+put the long international time into logTime
+log logTime
