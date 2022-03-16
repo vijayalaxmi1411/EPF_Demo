@@ -1,0 +1,31 @@
+﻿RefreshScreen
+typetext windowsKey,"r"
+typetext "chrome",return
+wait 3
+TypeText "https://www.makemytrip.com",return
+Click "EmptySpace"
+Click "FROM"
+wait 5
+set the SearchRectangle to screen_part_handler.ScreenPart("LeftHalf")
+click "makeftrip",
+MoveTo "SelectFrom"
+
+Repeat until ImageFound(text:"Hyderabad, India")
+	//	MoveTo "Scrollbar"	
+	//ScrollWheelDown 10
+	Click "POPULARCITIESFrom"
+	set the SearchRectangle to screen_part_handler.ScreenPart("TopHalf","LeftHalf")
+	WaitFor 10,[FoundImageLocation()]
+	typeText downArrow,downArrow,return
+End repeat
+TypeText altKey,F4
+
+
+
+
+
+
+
+
+
+
