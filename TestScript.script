@@ -1,0 +1,79 @@
+﻿to Fatca var_FATCA
+	if var_FATCA equals true
+		log "Executing GO TO CRS Action"
+	else if var_FATCA equals false
+		log "Executing FATCHA US Person state" 
+	end if
+	
+end Fatca
+
+
+to selectUSPersonOrNotUSPerson
+	log "Select any person in us or other place"
+end selectUSPersonOrNotUSPerson
+
+
+to clickNextSequent var_USPerson
+	if var_USPerson equals "Yes"
+		log "Go to Permenant Residential Address State"
+	else if var_USPerson equals "No"
+		log "Go to CRS State"
+	end if
+	
+end clickNextSequent
+
+
+to clickBack
+	log "click on back button and exit the loop"
+end clickBack
+
+
+to validatePRA var_PRA
+	if var_PRA equals "NotProvided"
+		log "Go to Country Action"
+	else if var_PRA equals "Provided"
+		log "Go to CRS State"
+	end if
+end validatePRA
+
+
+to Country
+	log "Transferred to Country Action"
+end Country
+
+to PostalCode
+	log "Transferred to PostalCode Action"
+end PostalCode
+
+to BlockHouseNumber
+	log "Entered house number"
+end BlockHouseNumber
+
+to Street 
+	log "Entered the street name"
+end Street
+
+
+to UnitNumber
+	log "Entered the unit number"
+end UnitNumber
+
+to BuildingName
+	log "Entered the building name"
+end BuildingName
+
+to clickNextPRA var_PRA
+	log "Go to FATCA Disclosure"
+end clickNextPRA
+
+to ReadFATCAClosure
+	log "Entered to the state FATCA Disclosure"
+end ReadFATCAClosure
+
+to clickNextFATCADisclosure
+log "Click on Next to go to CRS State"
+end clickNextFATCADisclosure
+
+
+
+
