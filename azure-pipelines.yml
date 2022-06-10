@@ -1,4 +1,10 @@
 # Starter pipeline
+- task: eggplant-runner@1
+  inputs:
+    serverURL: 'http://localhost:8000/'
+    testConfigID: '69403801-831f-41f8-82ff-8c501da7ff7d'
+    clientID: 'client:dai:agent:integration'
+    clientSecret: '3898f288-cad9-4d88-9489-a1ac372887ff'
 # Start with a minimal pipeline that you can customize to build and deploy your code.
 # Add steps that build, run tests, deploy, and more:
 # https://aka.ms/yaml
